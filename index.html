@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body class="theme_dark">
+
+    <div class="bg"></div>
+
+
+    <div class="po_r row">
+        <div class="col-8 col-pcl-9 col-mb-12 ">
+            <div class="main_container">
+                <div class="top_nav">
+                    <a href="/index2.html" class="main_title">
+                        <span class="btn_logo"></span>
+                        idea collector</a>
+
+                        <div id="colorMode" class="colormode_container">
+                            <div class="colormode_title">色彩模式</div>
+                            <button class="btn colormode light default" data-color="light">明亮</button>
+                            <button class="btn colormode dark " data-color="dark">暗黑</button>
+                            <button class="btn colormode blue " data-color="blue">藍色</button>
+                        </div>
+                </div>
+
+                <div class="posts_container">
+                    <div class="scrollauto_container" id="postContainer">
+                        <!-- <div class="theme">
+                            <div class="theme_title"><span class="deco"></span>插畫</div>
+                            <div class="swiper mySwiper po_r">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="post_item">
+                                            <div class="post_title">標題1</div>
+                                            <div class="post_time">2024-01-01</div>
+                                            <div class="post_cover"></div>
+                                            <button class="btn readmore_ver" type="button"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="swiper-button-prev" class="swiper-button-prev"></button>
+                                    <button id="swiper-button-next" class="swiper-button-next"></button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="formMb" class="col-4 col-pcl-3 col-mb-12 mb_ver">
+            <div class="po_r full_height">
+                <div class="form_position">
+                    <div class="form_container">
+                        <h1 class="addnewpost_title">Post your ideas or notes!</h1>
+                        <form action="" id="addNewPost" class="container_addnewpost">
+                            <div class="item">
+                                <label for="newPostTitle" class="newpost_label">title</label>
+                                <input id="newPostTitle" type="text" class="newpost_input_style" placeholder="請輸入標題">
+                            </div>
+
+                            <div class="item">
+                                <label for="classes" class="newpost_label">catalog</label>
+                                <select name="classes" id="newPostClass" class="newpost_input_style">
+                                    <!-- <option value="" selected>未定</option> -->
+                                </select>
+                                <!-- <div class="d_flex mart_10">
+                                <input id="addNewClassInput" class="newpost_input_style" type="text" placeholder="新增分類">
+                                <button id="addNewClassBtn" class="btn add marl_10" type="button"></button>
+                            </div> -->
+                            </div>
+
+                            <div class="item">
+                                <label for="images" class="newpost_label">image</label>
+                                <input id="addMainImg" class="newpost_input_style" type="text" placeholder="請輸入圖片網址">
+                            </div>
+
+                            <div class="item">
+                                <label for="newPostTextarea" class="newpost_label">content</label>
+                                <div class="po_r">
+                                    <!-- <div id="newPostTextareaShow" class="newpost_textarea_show"></div> -->
+                                    <textarea name="newPostTextarea" id="newPostTextarea" class="newpost_textarea"
+                                        placeholder="請輸入內文"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <label for="" class="newpost_label">#hashtag</label>
+                                <div class="d_flex">
+                                    <input id="addNewTagInput" class="newpost_input_style" type="text"
+                                        placeholder="新增標籤">
+                                    <button id="addNewTagBtn" class="btn add marl_10" type="button"></button>
+                                </div>
+                                <div id="commonTags" class="common_tags_overflow scrollbar_style mart_10" name="tags">
+                                </div>
+                            </div>
+
+
+                            <div class="item">
+                                <button id="postBtn" class="btn color_ver addnewpost_ver" type="button">發布</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <button id="btnNewPostClose_mb" type="button" class="btn_close mb_only"></button>
+            </div>
+        </div>
+        <button id="btnNewPost_mb" type="button" class="btn_newpost_mb"></button>
+
+        <div id="postItemPopOut" class="post_item_popout">
+            <div class="po_r max_full_height popout_container">
+                <div class="po_r popout_scroll">
+                    <div id="postItemPopOutContent" class="popout_content">
+                        <!-- <div class="post_title"></div>
+                            <div class="post_time"></div>
+                            <div class="post_cover"><img src="" alt=""></div>
+                            <div class="post_context"></div>
+                            <div class="common_tags_overflow scrollbar_style mart_10" name="tags">
+                            </div> -->
+                    </div>
+                </div>
+                <button id="btnPopOutClose" class="btn_close" type="button"></button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="ideaCollector.js"></script>
+</body>
+
+</html>
