@@ -213,7 +213,7 @@ body.theme_light {
 
     --bg_col: linear-gradient(#fff, #fff);
     --form_bg: linear-gradient(#f6f6f6, #f0f0f0);
-    --form_bg_mb: linear-gradient(rgba(246, 246, 246, .95), rgba(240, 240, 240, .95));
+    --form_bg_mb: linear-gradient(rgba(246, 246, 246, .97), rgba(240, 240, 240, .97));
     --form_input_bg: #{$themeLight_txt_col_opposite};
     --form_input_border: #{$themeLight_txt_col_opposite};
     --form_title_col:#{$themeLight_txt_sub_col};
@@ -238,7 +238,7 @@ body.theme_light {
     --colormode_title_col: #{$themeLight_txt_col};
 
     --top_nav_border:#{$themeLight_main_col_light};
-    
+
     --theme_title_txt_col:#{$themeLight_main_col_hover};
     --post_item_bg: #f6f6f6;
 
@@ -449,6 +449,12 @@ button {
     max-height: 100%;
 }
 
+.max_full_height_mb {
+    @media #{$mb} {
+        max-height: 100%;
+    }
+}
+
 
 // components
 
@@ -651,6 +657,17 @@ button {
 
 }
 
+.mb_form_flex_container {
+    position: relative;
+    height: 100%;
+
+    @media #{$mb} {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 .form_position {
     width: 100%;
 
@@ -662,7 +679,7 @@ button {
     }
 
     @media #{$mb} {
-        height: 100%;
+        max-height: 100%;
         border-radius: 20px;
         overflow: auto;
 
@@ -678,7 +695,10 @@ button {
     }
 }
 
+
+
 .form_container {
+
     padding: 40px;
     background: var(--form_bg);
 
@@ -690,6 +710,7 @@ button {
     @media #{$mb} {
         background: var(--form_bg_mb);
         padding: 30px;
+        border-radius: 20px;
     }
 
     .item+.item {
@@ -1072,7 +1093,7 @@ button {
         display: none;
 
         &.on {
-            display: block;
+            display: flex;
             z-index: 2;
         }
     }
